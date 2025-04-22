@@ -1,0 +1,84 @@
+/*Mae de todos */
+.main_login {
+    display: flex;
+    height: 100vh;
+}
+
+
+
+/*Banner */
+
+.banner {
+    background-image: url("../../assets/img/fundoLogin.png");
+    flex: 1;
+
+    /*Modificar algumas caractericas da imagem */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+/*Form de login */
+
+.section_login{
+    flex: 1;
+
+    background-color: #CC3F55;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_login img {
+    width: 250px;
+}
+
+.form_login {
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_login h1{
+    /*Vai deixar o titulo com letras maiusculas*/
+    text-transform: uppercase;
+}
+
+.campos_login{
+    width: 100%;
+}
+
+.campo_input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo_input input {
+    height: 30px;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+
+    box-shadow: 1px 4px 4px 0px black;
+}
+
+/*RESPOSIVIDADE */
+
+/* Me de algumas caracteriticas a partir de um tamanho de tela */
+
+@media screen and (max-whidth: 768px){
+    .banner{
+        /* Para a imagem desaparecer */
+        display: none;
+    }
+}
