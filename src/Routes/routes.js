@@ -8,11 +8,11 @@ const Rotas = () =>{
         <BrowserRouter>
         <Routes>
             {/* http://localhost:3000/   => Login */}
-            <Route path="/" element = {<Login/>}/>
+            <Route path="/" element = {<Login/>} exact/>
             {/* http://localhost:3000/Filme    => CadastroFilme*/}
-            <Route path="/Filme" element = {<CadastroFilme/>}/>
+            <Route path="/Filme" element = {<CadastroFilme/>} exact/>
             {/* http://localhost:3000/Genero   => CadastroGenero */}
-            <Route path="/Genero" element = {<CadastroGenero/>}/>
+            <Route path="/Genero" element = {<CadastroGenero/>} exact/>
         </Routes>
         </BrowserRouter>
     )
