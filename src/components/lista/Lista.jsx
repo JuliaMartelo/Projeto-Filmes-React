@@ -13,7 +13,7 @@ const Lista = () => {
         <div className="tabela">
             <table>{/*TABELA/cabeçalho da tabela:*/}
                 <thead>
-                    <tr className="cabecalho"> {/*tr => table row*/}
+                    <tr className="table_cabecalho"> {/*tr => table row*/}
                         <th>Nome</th>{/*th => table head*/}
                         <th>Gênero</th>
                         <th>Editar</th>
@@ -23,10 +23,10 @@ const Lista = () => {
                 {/* tbody => corpo da tabela */}
                 <tbody>
                 <tr className="item_lista">
-                    <td>Velozes e Furiosos</td>
-                    <td>Ação</td>
-                    <td><img src={Editar} alt="Imagem de uma caneta" /></td>
-                    <td><img src={Excluir} alt="Imagem de um lixo" /></td>
+                    <td data-cell="Nome">Velozes e Furiosos</td>
+                    <td data-cell="Gênero">Ação</td>
+                    <td data-cell="Editar"><img src={Editar} alt="Imagem de uma caneta" /></td>
+                    <td data-cell="Excluir"><img src={Excluir} alt="Imagem de um lixo" /></td>
                 </tr>
 
                 </tbody>

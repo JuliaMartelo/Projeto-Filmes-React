@@ -1,14 +1,9 @@
 import './App.css';
-import CadastroFilme from './pages/cadastroFilme/CadastroFilme.jsx';
-import Login from "./pages/login/Login.jsx"
+import Routes from "./Routes/routes"
 
 function App() {
   return (
-   <>
-   {/* <Login/> */}
-   
-   <CadastroFilme/>
-   </>
+    <Routes/>
   );
 }
 
