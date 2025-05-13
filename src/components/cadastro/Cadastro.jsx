@@ -5,13 +5,20 @@ import Botao from "../botao/Botao";
 const Cadastro = (props) => {
     return (
         <section className="section_cadastro">
-            <form action="" className="layout_grid form_cadastro">
+            <form onSubmit={props.funcCadastro} className="layout_grid form_cadastro">
                 <h1>{props.tituloCadastro}</h1>
                 <hr />
                 <div className="campos_cadastro">
                     <div className="campo_cad_nome">
                         <label htmlFor="nome">Nome</label>
-                        <input type="text" name="nome" placeholder={`Digite o nome do ${props.placeholder}`}/>
+                        <input type="text" 
+                        name="nome" 
+                        placeholder={`Digite o nome do ${props.placeholder}`}
+                        value={props.valorInput} //consumindo api
+                        // ao mudar o input algo acontece
+                        // e => 
+                        onChange={(e) => props.setValorInput(e.target.value)}
+                        />
                     </div>
                     <div className="campo_cad_nome" style={{display:props.visibilidade}}>
                         <label htmlFor="genero">Gênero</label>
