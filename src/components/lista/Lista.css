@@ -65,6 +65,12 @@
     cursor: pointer;
 }
 
+.botao_editar{
+    border: none;
+    width: 30px;
+    background-color: white;
+    cursor: pointer;
+}
 
 
 

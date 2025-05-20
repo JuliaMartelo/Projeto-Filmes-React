@@ -31,7 +31,9 @@ const Lista = (props) => {
                                         {item.nome}
                                     </td>
                                     <td data-cell="Gênero" style={{ display: props.excluirNome }} >Ação</td>
-                                    <td data-cell="Editar"><img src={Editar} alt="Imagem de uma caneta" /></td>
+                                     
+                                    <td data-cell="Editar"><button className="botao_editar" onClick={() => props.funcEditar(item)}><img src={Editar} alt="Imagem de uma caneta" /></button></td>
+                                    
                                     <button className="botao_deletar" onClick={() => props.funcExcluir(item)}><td data-cell="Excluir"><img src={Excluir} alt="Imagem de um lixo" /></td></button>
                                 </tr>
                             ))
