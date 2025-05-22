@@ -22,15 +22,17 @@ const Lista = (props) => {
                     </thead>
                     {/* tbody => corpo da tabela */}
                     <tbody>
-                        {props.lista && props.lista.length > 0 ? (
+                        {props.lista && props.lista. > 0 ? (
                             // vamos mapear os itens da lista
                             props.lista.map((item) => (
 
-                                <tr className="item_lista" key={item.idGenero}>
+                                <tr className="item_lista" key={props.tipoLista == "genero" ? item.idGenero : item.idFilme}>
                                     <td data-cell="Nome" >
-                                        {item.nome}
+                                        {props.tipoLista == "genero" ? item.nome : item.titulo}
                                     </td>
-                                    <td data-cell="Gênero" style={{ display: props.excluirNome }} >Ação</td>
+                                    <td data-cell="Gênero" style={{ display: props.excluirNome }} >
+                                        {item.genero?.nome}
+                                    </td>
                                      
                                     <td data-cell="Editar"><button className="botao_editar" onClick={() => props.funcEditar(item)}><img src={Editar} alt="Imagem de uma caneta" /></button></td>
                                     

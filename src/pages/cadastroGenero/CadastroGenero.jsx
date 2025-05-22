@@ -72,7 +72,6 @@ const CadastroGenero = () => {
         try {
             const resposta = await api.get("genero");
 
-
             setListaGenero(resposta.data);
 
         } catch (error) {
@@ -193,6 +192,8 @@ const CadastroGenero = () => {
 
                     // atrubuir para lista, o meu estado atual:
                     lista={listaGenero}
+
+                    tipoLista="genero"
 
 
                     funcExcluir={deletarGenero}

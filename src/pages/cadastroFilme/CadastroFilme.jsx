@@ -17,6 +17,7 @@ const CadastroFilme = () => {
     const [listaGenero, setListaGenero] = useState("");
     const [genero, setGenero] = useState("");
     const [filme, setFilme] = useState("");
+    const [listaFilme, setListaFilme] = useState([])
 
     // funcao para trazer os generos no meu select
     async function listarGenero() {
@@ -49,8 +50,20 @@ const CadastroFilme = () => {
         alert("alerta");
     }
 
+     async function listarFilme() {
+        try {
+            const resposta = await api.get("filme");
+            setListaFilme(resposta.data);
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+
+
     useEffect(() => {
         listarGenero();
+        listarFilme();
     }, []);
     return (
         <>
@@ -69,7 +82,15 @@ const CadastroFilme = () => {
                     setValorSelect={setGenero}
 
                 />
-                <Lista tituloDaLista="Lista de Filmes" />
+                <Lista 
+                
+                tituloDaLista="Lista de Filmes" 
+
+                tipoLista = "filme"
+
+                lista = {listaFilme}
+                
+                />
             </main>
             <Footer />
         </>
